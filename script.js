@@ -13,10 +13,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // ✅ 「いいね」が押されていたら緑のボタンにする
         if (storedCount === "1") {
-            button.src = "グッドマーク_緑.png";
+            button.src = "goodmark_green.png";
             button.classList.add("clicked");
         } else {
-            button.src = "グッドマーク.png"; // 初期状態の白いボタン
+            button.src = "goodmark.png"; // 初期状態の白いボタン
             button.classList.remove("clicked");
         }
 
@@ -27,13 +27,13 @@ document.addEventListener("DOMContentLoaded", function() {
             if (this.classList.contains("clicked")) {
                 // ✅ いいね取り消し
                 localStorage.setItem("goodCount_" + id, "0");
-                this.src = "グッドマーク.png";
+                this.src = "goodmark.png";
                 this.classList.remove("clicked");
                 messagePopup.style.display = "none";
             } else {
                 // ✅ いいね付与
                 localStorage.setItem("goodCount_" + id, "1");
-                this.src = "グッドマーク_緑.png";
+                this.src = "goodmark_green.png.png";
                 this.classList.add("clicked");
 
                 // ✅ 押したボタンの上にポップアップを表示
